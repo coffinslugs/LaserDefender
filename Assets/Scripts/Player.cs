@@ -10,6 +10,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        MovePlayer();
+    }
+
+    private void MovePlayer()
+    {
         Vector3 delta = rawInput * moveSpeed * Time.deltaTime;
         transform.position += delta;
     }
