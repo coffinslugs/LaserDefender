@@ -6,7 +6,7 @@ using UnityEngine;
 public class WaveConfigSO : ScriptableObject
 {
     [SerializeField] Transform pathPrefab;
-    [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float moveSpeed = 5f;
 
     public Transform GetStartingWaypoint()
     {
@@ -25,7 +25,7 @@ public class WaveConfigSO : ScriptableObject
         return waypoints;
     }
 
-    public float getMoveSpeed()
+    public float GetMoveSpeed()
     {
         return moveSpeed;
     }
