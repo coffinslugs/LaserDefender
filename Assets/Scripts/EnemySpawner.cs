@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        SpawnEnemies();
+        StartCoroutine(SpawnEnemies());
     }
 
     public WaveConfigSO GetCurrentWave()
@@ -17,15 +17,16 @@ public class EnemySpawner : MonoBehaviour
         return currentWave;
     }
 
-    void SpawnEnemies()
+    IEnumerator SpawnEnemies()
     {
         for (int i = 0; i < currentWave.GetEnemyCount(); i++)
         {
             Instantiate(currentWave.GetEnemyPrefab(i),
-            currentWave.GetStartingWaypoint().position,
-            Quaternion.identity,
-            transform);
-        }
+                        currentWave.GetStartingWaypoint().position,
+                        Quaternion.identity,
+                        transform);
 
+            yield return new WaitForSeconds(currentWave.GetRandomSpawnTime());
+        }
     }
 }
