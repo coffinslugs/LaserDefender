@@ -473,7 +473,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingClip: {fileID: 8300000, guid: 1b087dda28ed6b94b9476565c3d8202b, type: 3}
-  shootingVolume: 0.5
+  shootingVolume: 0.393
+  damageClip: {fileID: 8300000, guid: 1c941c63da251c343bdc5c52f2eedb08, type: 3}
+  damageVolume: 0.4
 --- !u!4 &1660237870
 Transform:
   m_ObjectHideFlags: 0
